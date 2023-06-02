@@ -15,15 +15,8 @@
             Tires = new Tires();
         }
 
-        public decimal Price()
-        {
-            decimal total = 0;
-
-            total += Engine.Prices[Engine.Type];
-            total += Paint.Prices[Paint.Color];
-            total += Seats.Prices[Seats.Material];
-            return total;
-        }
+        public decimal Price() => Engine.Prices[Engine.Type] + Paint.Prices[Paint.Color] + Seats.Prices[Seats.Material];
+        
     }
 }
 
